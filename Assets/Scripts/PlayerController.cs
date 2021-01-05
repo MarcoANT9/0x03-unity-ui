@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     public int health = 5;
     public float speed = 1000f;
+    public Text healthText;
     public Text scoreText;
     
     private int score = 0;
@@ -65,7 +66,8 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Trap"))
         {
             health--;
-            Debug.Log($"Health: {health}");
+            // Debug.Log($"Health: {health}");
+            SetHealthText();
             if (health == 0)
             {
                 SceneManager.LoadScene("maze");
@@ -79,8 +81,16 @@ public class PlayerController : MonoBehaviour
             
         }
     }
+    // ----
+    void SetHealthText()
+    {
+        healthText.text = $"Health: {health}";
+    }
+    // ----
     void SetScoreText()
     {
         scoreText.text = $"Score: {score}";
     }
+    // ----
+
 }
