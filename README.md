@@ -112,7 +112,7 @@ Edit the PlayerController.cs script so that when the Player‘s health reaches 0:
 
 
 #### Task 7. Wait a second...
-The transition from the Game Over! text and the scene reloading is very sudden and abrupt. Let’s use a [coroutine] (https://intranet.hbtn.io/rltoken/O5SHYPuhCBEmSmLzpnTUWA) and WaitForSeconds() to create a delay where once the Player‘s health is 0 and the Game Over! text is displayed, the scene waits 3 seconds to reload.
+The transition from the Game Over! text and the scene reloading is very sudden and abrupt. Let’s use a [coroutine](https://intranet.hbtn.io/rltoken/O5SHYPuhCBEmSmLzpnTUWA) and WaitForSeconds() to create a delay where once the Player‘s health is 0 and the Game Over! text is displayed, the scene waits 3 seconds to reload.
 
 Create a new method IEnumerator LoadScene(float seconds):
 
@@ -186,7 +186,7 @@ Now, instead of creating a script to switch between the MainMenu and OptionsMenu
 
 
 #### Task 12. Accessibility
-Having red traps and a green goal isn’t very accessible design for certain types of colorblindness. Ideally in game design, it would be better to avoid color coding important mechanics or objects entirely. For the sake of this UI project, we’ll add a Colorblind Mode option for our maze.
+Having red traps and a green goal isn’t very accessible design for certain types of [colorblindness](https://intranet.hbtn.io/rltoken/0zQvwmazM5Q6fmuHZE8tzw). Ideally in game design, it would be better to avoid color coding important mechanics or objects entirely. For the sake of this UI project, we’ll add a Colorblind Mode option for our maze.
 
 Add a UI Toggle GameObject called ColorblindMode to the OptionsMenu GameObject.
 
@@ -204,5 +204,5 @@ In the Inspector, assign the materials trap and goal and the toggle ColorblindMo
 
 Within PlayMaze(), check if colorblindMode is toggled on. If it is, change the trap and goal material colors:
 
-* trap material color: new Color32(255, 112, 0, 1) (See: [Material.color] (https://intranet.hbtn.io/rltoken/2GDMgQX6al2omACqx_c3iA), [Color32] (https://intranet.hbtn.io/rltoken/U64Zs4Tym4F8ptE7eOvDPA))
+* trap material color: new Color32(255, 112, 0, 1) (See: [Material.color](https://intranet.hbtn.io/rltoken/2GDMgQX6al2omACqx_c3iA), [Color32](https://intranet.hbtn.io/rltoken/U64Zs4Tym4F8ptE7eOvDPA))
 * goal material color: Color.blue
