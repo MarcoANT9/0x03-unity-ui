@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,7 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     public int health = 5;
     public float speed = 1000f;
+    public Text scoreText;
     
     private int score = 0;
     private Rigidbody rb_player;
@@ -55,7 +57,8 @@ public class PlayerController : MonoBehaviour
         if (other.CompareTag("Pickup"))
         {
             score++;
-            Debug.Log($"Score: {score}");
+            // Debug.Log($"Score: {score}");
+            SetScoreText();
             Destroy(other.gameObject);
         }
 
@@ -75,6 +78,9 @@ public class PlayerController : MonoBehaviour
             SceneManager.LoadScene("maze");
             
         }
-
+    }
+    void SetScoreText()
+    {
+        scoreText.text = $"Score: {score}";
     }
 }
