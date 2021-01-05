@@ -1196,10 +1196,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2290ddeb6075b04c9d9dd55cc1020fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  winLose: {fileID: 1271108644}
+  winLoseBG: {fileID: 1271108646}
   health: 5
   speed: 1000
   healthText: {fileID: 513197408}
   scoreText: {fileID: 1245810108}
+  winLoseText: {fileID: 560367008}
 --- !u!1 &213109764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2637,7 +2640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &560367007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5125,7 +5128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1271108645
 RectTransform:
   m_ObjectHideFlags: 0

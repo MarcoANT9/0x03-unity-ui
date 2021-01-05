@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
     //================================================================================
     // Public Variables ==============================================================
     //================================================================================
+    public Image winLoseBG;
     public int health = 5;
     public float speed = 1000f;
     public Text healthText;
     public Text scoreText;
+    public Text winLoseText;
     
     private int score = 0;
     private Rigidbody rb_player;
@@ -70,13 +72,21 @@ public class PlayerController : MonoBehaviour
             SetHealthText();
             if (health == 0)
             {
+                winLoseText.color = Color.white;
+                winLoseText.text = $"Game Over!";
+                winLoseBG.color = Color.red;
+                winLoseBG.gameObject.SetActive(true);
                 SceneManager.LoadScene("maze");
             }
         }
 
         if (other.CompareTag("Goal"))
         {
-            Debug.Log("You win!");
+            //Debug.Log("You win!");
+            winLoseText.color = Color.black;
+            winLoseText.text = $"You Win!";
+            winLoseBG.color = Color.green;
+            winLoseBG.gameObject.SetActive(true);
             SceneManager.LoadScene("maze");
             
         }
