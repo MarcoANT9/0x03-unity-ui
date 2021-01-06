@@ -12,6 +12,7 @@ public class MainMenu : MonoBehaviour
     public Button optionsButton;
     public Button backButton;
     public Button quitButton;
+    public GameObject mainMenu;
     public GameObject optionMenu;
 
     //================================================================================
@@ -54,17 +55,13 @@ public class MainMenu : MonoBehaviour
     // Takes out the options
     public void OptionsMenu()
     {
-        playButton.gameObject.SetActive(false);
-        optionsButton.gameObject.SetActive(false);
-        quitButton.gameObject.SetActive(false);
+        mainMenu.SetActive(false);
         optionMenu.SetActive(true);
     }
     // Go back to main
     public void BackToMain()
     {
-        playButton.gameObject.SetActive(true);
-        optionsButton.gameObject.SetActive(true);
-        quitButton.gameObject.SetActive(true);
+        mainMenu.SetActive(true);
         optionMenu.SetActive(false);
     }
 
