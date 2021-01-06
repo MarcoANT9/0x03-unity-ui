@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using System.Collections;
 
 public class PlayerController : MonoBehaviour
 {
@@ -70,37 +71,41 @@ public class PlayerController : MonoBehaviour
             health--;
             // Debug.Log($"Health: {health}");
             SetHealthText();
-            if (health == 0)
+            if (health == 0) // -- Omae wa mou shindeiru!
             {
                 winLoseText.color = Color.white;
                 winLoseText.text = $"Game Over!";
                 winLoseBG.color = Color.red;
                 winLoseBG.gameObject.SetActive(true);
-                SceneManager.LoadScene("maze");
+                StartCoroutine(LoadScene(3f));
             }
         }
 
-        if (other.CompareTag("Goal"))
+        if (other.CompareTag("Goal")) // -- A winner is you!
         {
             //Debug.Log("You win!");
             winLoseText.color = Color.black;
             winLoseText.text = $"You Win!";
             winLoseBG.color = Color.green;
             winLoseBG.gameObject.SetActive(true);
-            SceneManager.LoadScene("maze");
-            
+            StartCoroutine(LoadScene(3f));
         }
     }
-    // ----
+    // Health Values
     void SetHealthText()
     {
         healthText.text = $"Health: {health}";
     }
-    // ----
+    // Score Values
     void SetScoreText()
     {
         scoreText.text = $"Score: {score}";
     }
+    // Wait to reload
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     // ----
-
 }
