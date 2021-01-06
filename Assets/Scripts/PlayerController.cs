@@ -50,6 +50,10 @@ public class PlayerController : MonoBehaviour
         {
             rb_player.AddForce(speed * Time.deltaTime, 0, 0);
         }
+        if (Input.GetKey(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+        }
     }
 
     //================================================================================

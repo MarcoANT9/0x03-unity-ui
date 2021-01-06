@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     // Public Variables ==============================================================
     //================================================================================
     public Button playButton;
+    public Button quitButton;
 
     //================================================================================
     // Private Variables =============================================================
@@ -20,6 +21,7 @@ public class MainMenu : MonoBehaviour
     void Start()
     {
         playButton.onClick.AddListener(PlayMaze);
+        quitButton.onClick.AddListener(QuitMaze);
     }
 
     //================================================================================
@@ -37,6 +39,11 @@ public class MainMenu : MonoBehaviour
     public void PlayMaze()
     {
         SceneManager.LoadScene("maze");
+    }
+    public void QuitMaze()
+    {
+        Application.Quit();
+        Debug.Log("Quit Game");
     }
 
 
