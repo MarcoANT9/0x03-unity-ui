@@ -1196,7 +1196,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2290ddeb6075b04c9d9dd55cc1020fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  winLose: {fileID: 1271108644}
   winLoseBG: {fileID: 1271108646}
   health: 5
   speed: 1000
@@ -5045,7 +5044,7 @@ GameObject:
   - component: {fileID: 1245810109}
   - component: {fileID: 1245810108}
   m_Layer: 5
-  m_Name: Text
+  m_Name: ScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
