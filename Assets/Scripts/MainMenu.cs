@@ -26,8 +26,6 @@ public class MainMenu : MonoBehaviour
     {
         playButton.onClick.AddListener(PlayMaze);
         quitButton.onClick.AddListener(QuitMaze);
-        optionsButton.onClick.AddListener(OptionsMenu);
-        backButton.onClick.AddListener(BackToMain);
     }
 
     //================================================================================
@@ -52,17 +50,6 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
         Debug.Log("Quit Game");
     }
-    // Takes out the options
-    public void OptionsMenu()
-    {
-        mainMenu.SetActive(false);
-        optionMenu.SetActive(true);
-    }
-    // Go back to main
-    public void BackToMain()
-    {
-        mainMenu.SetActive(true);
-        optionMenu.SetActive(false);
-    }
+
 
 }
