@@ -9,11 +9,11 @@ public class MainMenu : MonoBehaviour
     // Public Variables ==============================================================
     //================================================================================
     public Button playButton;
-    public Button optionsButton;
-    public Button backButton;
     public Button quitButton;
-    public GameObject mainMenu;
-    public GameObject optionMenu;
+    public Material trapMat;
+    public Material goalMat;
+    public Toggle colorblindMode;
+
 
     //================================================================================
     // Private Variables =============================================================
@@ -43,6 +43,17 @@ public class MainMenu : MonoBehaviour
     public void PlayMaze()
     {
         SceneManager.LoadScene("maze");
+        if (colorblindMode.isOn)
+        {
+            goalMat.color = Color.blue;
+            trapMat.color = new Color32(255, 112, 0, 1);
+        }
+        else
+        {
+            goalMat.color = Color.green;
+            trapMat.color = Color.red;
+        }
+        
     }
     // Ends the game...
     public void QuitMaze()
